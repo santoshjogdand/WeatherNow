@@ -113,27 +113,12 @@ body {
   
 .frame{
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 44px;
+  height: 50px;
   width: 100px;
-  padding-top: 0px;
-  position: relative;
-   box-shadow:
-   -7px -7px 20px 0px #fff9,
-   -4px -4px 5px 0px #fff9,
-   7px 7px 20px 0px #0002,
-   4px 4px 4px 0px #0001,
-   inset 0px 0px 0px 0px #fff9,
-   inset 0px 0px 0px 0px #0001,
-   inset 0px 0px 0px 0px #fff9,        
-   inset 0px 0px 0px 0px #0001;
- transition:box-shadow 10s cubic-bezier(.79,.21,.06,.81);
-   border-radius: 5px;
-   margin-left: auto;
-   margin-right: auto;
-   transition: width .35s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn{
@@ -145,10 +130,6 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-}
-.frame:hover{
-  width: 140px;
-  transition: width .35s ease-in-out;
 }
 #head{
   padding: .5px;
@@ -164,4 +145,9 @@ body {
 }
 #wprg{
   margin-left: 0;
+}
+.wtsapp{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
