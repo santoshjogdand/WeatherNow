@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Now</title>
-  <link rel="stylesheet" href="./style/style.css">
-</head>
-
-<body>
-  <div id="head">
-    <h1>Weather Now</h1>
-  </div>
-  <form action="./script/script.js" method="post">
-    <input type="text" id="input1" name="city" placeholder="Enter a city">
-    <br>
-    <input type="submit" id="input2" value="Get Weather">
-  </form>
-  <div id="weather">
-  </div>
-  <div class="wtsapp">
-    <a onclick="wa()" id="an" class="btn">
-      <img src="./style/whatsapp.svg" alt="" srcset="">
-      <i class="far fa-envelope"></i>
-    </a>
-  </div>
-</body>
-<script src="/script/script.js"></script>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Now</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div id="head">
+      <h1>Weather Now</h1>
+    </div>
+    <form action="./script/script.js" method="post">
+      <input type="text" id="input1" name="city" placeholder="Enter a city" />
+      <br />
+      <input type="submit" id="input2" value="Get Weather" />
+    </form>
+    <div id="weather"></div>
+    <div class="wtsapp">
+      <a onclick="wa()" id="an" class="btn">
+        <img src="./style/whatsapp.svg" alt="" srcset="" />
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+  </body>
+  <script src="/script/script.js"></script>
 </html>
