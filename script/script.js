@@ -2,30 +2,19 @@ const API_KEY = "b9d26520f7b8a11536f284acef2aa108";
 let CityName;
 let temperature;
 let weatherText;
-function getWeather(city) {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      const {
-        main: { temp },
-        weather: [weather]
-      } = data;
-      const icon = `https://openweathermap.org/img/wn/${weather.icon}.png`;
-       weatherText = weather.description;
-       temperature  = parseInt(temp - 273.123);
-       CityName = (
-          (city[0]).toUpperCase()+(city.slice(1)).toLowerCase()
-        );
-          
-        
-          
-      document.getElementById("weather").innerHTML = `
-      <img src="${icon}" id="png" alt="Weather icon"> <br>
-        <p id="wprg">In <b>${CityName}</b> there is a <b>${weatherText}</b> and temprature is <b>${temperature}°C</b>.</p>
-        
-      `;
-    });
+async function getWeather(city) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
+  let value  = await fetch(url)
+  let data = await value.json();
+  console.log("name: " + data.name)
+  console.log("Tempreture: " + data.main.temp)
+  console.log("Humidity: " + data.main.humidity)
+  console.log("Weather Description: " + data.weather[0].description)
+  console.log("Wind Speed: " + data.wind.speed)
+    const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    icimg = document.querySelector(".info")
+    icimg.innerHTML = `<img class = "icon" src = "${icon}">`;
+    document.querySelector(".icon").style.width = '100px';
 }
 
 function wa(){
@@ -40,8 +29,12 @@ function wa(){
   }
 }
 
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const city = document.querySelector("input[name=city]").value;
-  getWeather(city);
-});
+  searchbtn = document.querySelector(".getWeather");
+  searchbtn.addEventListener("click",()=>{
+    city = document.querySelector("#city").value;
+    getWeather(city);
+    console.log("clicked on button!!");
+    console.log(city);
+
+  });
+

@@ -1,127 +1,71 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
 body {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
-  font-family: "Space Grotesk", sans-serif;
-  background-color: #ffffff;
+  min-height: 100vh;
+}
+h1 {
+  text-align: center;
   margin: 0;
 }
-
-#main {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-h1 {
-  color: white;
-  text-align: center;
-  font-family: 'Righteous', cursive;
-  font-weight: 400;
-  margin: 10px 0px;
-  width: 100%;
-}
-form {
-  margin-top: 15px;
+.weather {
   display: flex;
-  justify-content: center;
-  max-width: 100%;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 400;
   align-items: center;
-  flex-direction: column
-}
-#input1 {
-  display: block;
-  max-width: 100%;
-  min-width: 100px;
-  min-height: 35px;
-  padding-left: 8px;
-  margin-right: 5px;
-  background-image: linear-gradient(
-    to right,
-    rgb(21, 154, 255),
-    rgb(172, 41, 248)
-  );
-
-  border: 0px solid rgb(0, 0, 0);
-  color: black;
-  border-radius: 4px;
-  color: rgb(255, 255, 255);
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 900;
-}
-input[type="text"] {
-  display: block;
-  width: 200px;
-  -webkit-transition: width 0.35s ease-in-out;
-  transition: width 0.35s ease-in-out;
-}
-input[type="text"]:focus {
-  width: 300px;
-  outline: 0;
-}
-#input1::placeholder {
-  color: rgb(255, 255, 255);
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 900;
-  display: block;
-}
-
-#input2 {
-  min-width: 100px;
-  min-height: 35px;
-  padding: 0 8px 0px 8px;
-  background: linear-gradient(90deg, #5e02af 0%, #3a47d5 100%);
-  border: 0px solid rgb(0, 0, 0);
-  border-radius: 3px;
-  color: white;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 900;
-  display: block;
-  margin-top: .5rem;
-}
-/* input {
-  display: block;
-  max-width: 100%;
-  min-width: 200px;
-} */
-
-#weather {
-  /* margin-top: 10px; */
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 400;
-  font-size: larger;
-  text-align: center;
-}
-
-.btn {
-  height: 20px;
-  width: 20px;
-  border-radius: 3px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-#head {
-  padding: 0.5px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background: linear-gradient(to right, rgb(76, 27, 255), rgb(233, 161, 255));
-}
+  margin-top: 10px;
+  margin-left: 5px;
 
-#png {
-  margin-right: 0;
-}
-#wprg {
-  margin-left: 0;
 }
 .wtsapp {
+  width: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.search {
+  width: 25px;
+  margin-left: 5px;
+}
+#city {
+  height: 30px;
+  width: 200px;
+  margin-left: 20px;
+  padding: 1px 15px;
+  border-radius: 22px;
+  border: solid black 1px;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 30px;
+  background-color: #00904d;
+  color: #fff;
+  text-align: center;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  align-items: center;
 }
+@media only screen and (max-width: 600px) {
+  .info{
+    margin-top: 20px;
+    height: 350px;
+    max-width: 20%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+  }
+}
+.info{
+  margin-top: 20px;
+  height: 350px;
+  max-width: 250px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
