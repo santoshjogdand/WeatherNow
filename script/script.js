@@ -14,9 +14,11 @@ async function getWeather(city) {
   let data = await value.json();
   let notf = document.querySelector(".notf");
   let info = document.querySelector(".info");
+  info.style.transition = "height 5s linear";
   info.style.display = "none";
   if (data.name == undefined) {
     notf.style.display = "flex";
+    info.style.transition = "height 5s linear";
     info.style.display = "none";
   } else {
     CityName = data.name;
@@ -31,7 +33,9 @@ async function getWeather(city) {
     notf.style.display = "none";
     load.style.display = "flex";
     setTimeout(function() {
+      info.style.transition = "height 5s linear";
       info.style.display = "flex";
+      info.style.transition = "display 5s linear";
       load.style.display = "none";
     }, 3000);
     let wimg = document.querySelector(".wimg");
