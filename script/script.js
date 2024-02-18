@@ -98,12 +98,14 @@ function wa() {
     console.log(msg);
   }
 }
-
+whatsapp = document.getElementById("an");
+whatsapp.addEventListener("click",()=>{
+  wa();
+})
 searchbtn = document.querySelector(".search");
 searchbtn.addEventListener("click", () => {
   city = document.querySelector("#city").value;
   getWeather(city);
-  
   console.log("clicked on button!!");
   console.log(city);
 });
