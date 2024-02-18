@@ -121,11 +121,11 @@ footer {
   border: 1px solid black;
   display: none;
   flex-direction: column;
-  transition: height .3s linear;
+  transition: height 4s linear;
 }
 .info{
   height: 300px;
-  transition: height .3s linear;
+  transition: height 4s linear;
 }
 
 .nav {
