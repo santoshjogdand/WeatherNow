@@ -1,25 +1,23 @@
+document.getElementById("foot").style.display = "none"
+document.querySelector(".main").style.display = "none"
+let loader = document.getElementById("loader");
+setTimeout(function() {
+  document.querySelector(".main").style.display = "block"
+  loader.style.display = "none"
+  document.getElementById("foot").style.display = "block"
+}, 2000);
 const API_KEY = "b9d26520f7b8a11536f284acef2aa108";
-let CityName;
-let temperature;
-let weatherText;
-let iconid;
-let humidity;
-let windspeed;
-let country;
-let feel;
+let CityName,temperature,weatherText,iconid,humidity,windspeed,country,feel;
 async function getWeather(city) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
   let value = await fetch(url);
   let data = await value.json();
-  console.log(data)
-  console.log("name: " + data.name);
   let notf = document.querySelector(".notf");
   let info = document.querySelector(".info");
   info.style.display = "none";
   if (data.name == undefined) {
     notf.style.display = "flex";
     info.style.display = "none";
-    console.log("not found");
   } else {
     CityName = data.name;
     country = data.sys.country;
@@ -35,9 +33,7 @@ async function getWeather(city) {
     setTimeout(function() {
       info.style.display = "flex";
       load.style.display = "none";
-
     }, 3000);
-    const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
     let wimg = document.querySelector(".wimg");
     let wdescription = document.querySelector(".wdescription")
     let temper = document.querySelector(".temper");
@@ -95,7 +91,6 @@ function wa() {
       "*°C";
 
     document.getElementById("an").href = `https://wa.me/91${phno}?text=${msg}`;
-    console.log(msg);
   }
 }
 whatsapp = document.getElementById("an");
@@ -106,21 +101,5 @@ searchbtn = document.querySelector(".search");
 searchbtn.addEventListener("click", () => {
   city = document.querySelector("#city").value;
   getWeather(city);
-  console.log("clicked on button!!");
-  console.log(city);
-  let loc = document.querySelector('.loc')
-  getLocation();
-  function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      loc.innerHTML = "Geolocation is not supported by this browser.";
-    }
-  }
-  
-  function showPosition(position) {
-    loc.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
-  }
 
 });
