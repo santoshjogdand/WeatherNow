@@ -112,7 +112,7 @@ footer {
 .info {
   margin-top: 20px;
   height: 400px;
-  width: 300px;
+  width: 0px;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -121,7 +121,11 @@ footer {
   border: 1px solid black;
   display: none;
   flex-direction: column;
-  transition: display .3s;
+  transition: height .3s linear;
+}
+.info{
+  height: 300px;
+  transition: height .3s linear;
 }
 
 .nav {
