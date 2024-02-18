@@ -9,14 +9,15 @@ async function getWeather(city) {
   console.log("name: " + data.name);
   let notf = document.querySelector(".notf");
   let info = document.querySelector(".info");
-  CityName = data.name;
-  weatherText = data.weather[0].description;
-  temperature = data.main.temp;
   if (data.name == undefined) {
     notf.style.display = "flex";
     info.style.transitionDuration = "5s";
     notf.style.transitionDuration = "5s";
+    console.log("not found");
   } else {
+    CityName = data.name;
+    weatherText = data.weather[0].description;
+    temperature = data.main.temp;
     info.style.display = "none";
     info.style.display = "block";
     info.style.transitionDuration = "5s";
@@ -45,7 +46,7 @@ function wa() {
       "* and temprature is *" +
       temperature +
       "*°C";
-    
+
     document.getElementById("an").href = `https://wa.me/91${phno}?text=${msg}`;
     console.log(msg);
   }
