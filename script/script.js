@@ -108,4 +108,19 @@ searchbtn.addEventListener("click", () => {
   getWeather(city);
   console.log("clicked on button!!");
   console.log(city);
+  let = document.querySelector('.loc')
+  getLocation();
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      loc.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+  
+  function showPosition(position) {
+    loc.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+  }
+
 });

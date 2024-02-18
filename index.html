@@ -12,10 +12,13 @@
   <nav class="nav">
     <h1>Weather Now</h1>
   </nav>
+  <div class="wcontainer">
+    <div class="loc"></div>
   <div class="weather">
     <input type="text" id="city" placeholder="Enter a city">
     <img class="search" src="./images/search.png" alt="">
   </div>
+</div>
   <div class="notf">Invalid city name</div>
   <div class="load">
     <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle fill="#00FFDE" stroke="#00FFDE" stroke-width="2" r="15" cx="40" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#00FFDE" stroke="#00FFDE" stroke-width="2" r="15" cx="100" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#00FFDE" stroke="#00FFDE" stroke-width="2" r="15" cx="160" cy="65"><animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg> -->
@@ -61,7 +64,19 @@
   </div>
   </div>
   <footer>
-    © 2023 Weather Now
+   
+    <div class="credit"> 
+        © 2023 Weather Now<br>
+        Designed & devloped by Santosh Jogdand
+    </div>
+    <div class="social_icons">
+      <a href="https://github.com/santoshjogdand" target="_blank">
+        <img class="ftimg" src="./images/github.png">
+      </a>
+      <a href="https://linkedin.com/in/santoshjogdand" target="_blank">
+      <img class="ftimg" src="./images/linkedin.png">
+      </a>
+    </div>
   </footer>
 </body>
 <script src="./script/script.js"></script>

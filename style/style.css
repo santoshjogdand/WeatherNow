@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Protest+Riot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Signika+Negative:wght@300..700&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  min-height: 100%;
+  min-height: 100vh;
   background: rgb(249, 242, 237);
   font-family: "Concert One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  padding-bottom: 100px;
 }
+
 h1 {
   font-family: "Protest Riot", sans-serif;
   font-weight: 400;
@@ -15,14 +19,24 @@ h1 {
   margin-top: 15px;
   color: #000000;
   font-size: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
 .weather {
-  display: flex;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 22px;
+  border: solid black 1px;
+  background-color: white;
+  padding-left: 0px;
+  transition: .3ss;
   align-items: center;
+  justify-items: center;
+  margin-top: 20px;
+}
+.wcontainer{
+  display: flex;
   justify-content: center;
-  margin-top: 0;
-  margin-left: 5px;
 }
 .wtsapp {
   width: 30px;
@@ -31,32 +45,37 @@ h1 {
   margin-right: auto;
   margin-top: 10px;
 }
+
 .search {
   width: 25px;
-  margin-left: 5px;
   transition: .3s;
+  margin-bottom: -8px;
+  margin-right: 20px;
 }
-.search:hover{
-  width: 30px;
-  transition: .3s;
 
-}
 #city {
-  height: 30px;
-  width: 200px;
+  height: 40px;
+  width: 210px;
   margin-left: 20px;
-  padding: 1px 15px;
-  border-radius: 22px;
-  border: solid black 1px;
+  
+  transition: .3s;
+  font-family: "Signika Negative", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  border: none;  
   transition: .3s;
 
 }
-#city:focus{
+/* #city:active{
   outline: none;
+  border: none;
   width: 260px;
   transition: .3s;
-}
-#city:hover{
+
+} */
+#city:focus{
+  outline: none;
+  border: none;
   width: 260px;
   transition: .3s;
 }
@@ -64,17 +83,18 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 30px;
+  height: 70px;
   color: #000000;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: antiquewhite;
   backdrop-filter: blur(10px);
-  font-family: "Protest Riot", sans-serif;
-  font-weight: 400;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
   font-size: 15px;
+  border: 1px solid black;
+  background-color: antiquewhite;
 }
 
 .info {
@@ -84,7 +104,7 @@ footer {
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(255, 255, 255, 0.648);
+  background-color:rgb(255, 255, 255);
   backdrop-filter: blur(5px);
   border: 1px solid black;
   display: none;
@@ -95,127 +115,159 @@ footer {
   backdrop-filter: blur(15px);
 
 }
-.notf{
+
+.notf {
   display: flex;
   margin-top: 2px;
-  justify-content:center;
+  justify-content: center;
   font-size: 13px;
   color: red;
   display: none;
   transition: .3s;
 }
-.load{
+
+.load {
   display: flex;
   margin-top: 2px;
-  justify-content:center;
+  justify-content: center;
   color: red;
   display: none;
   transition: .3s;
-  
+
 }
+
 .load svg {
   width: 50px;
   height: 50px;
 
 }
-.wimg{
+
+.wimg {
   width: 60px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-} 
-.temper{
+}
+
+.temper {
   font-size: 70px;
   margin: 5px auto 0px auto;
 }
-.name{
+
+.name {
   font-size: 40px;
   margin: 20px auto 0px auto;
 }
-.cont{
+
+.cont {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-.humidimg, .windimg{
+
+.humidimg,
+.windimg {
   width: 30px;
   height: 30px;
   margin-top: 3px;
 }
-.wind, .humid{
+
+.wind,
+.humid {
   font-size: 15px
 }
-.wind{
+
+.wind {
   margin-right: 5px;
   margin-left: 5px;
 }
-.humid{
+
+.humid {
   margin-left: 5px;
 
 }
-.humidimg{
+
+.humidimg {
   margin-left: 15px;
 }
-.windimg{
+
+.windimg {
   /* margin-right: -30px;  */
   margin-left: auto;
 }
-.wdescription{
+
+.wdescription {
   margin: auto;
   font-size: 23px;
 }
+
 @media only screen and (max-width: 450px) {
-  .wimg{
+  .wimg {
     width: 60px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-  } 
-  .temper{
+  }
+
+  .temper {
     font-size: 70px;
     margin: 5px auto 0px auto;
   }
-  .name{
+
+  .name {
     font-size: 40px;
     margin: 20px auto 0px auto;
   }
-  .cont{
+
+  .cont {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
   }
-  .humidimg, .windimg{
+
+  .humidimg,
+  .windimg {
     width: 30px;
     height: 30px;
     margin-top: 3px;
   }
-  .wind, .humid{
+
+  .wind,
+  .humid {
     font-size: 15px
   }
-  .wind{
+
+  .wind {
     margin-right: 5px;
     margin-left: 5px;
   }
-  .humid{
+
+  .humid {
     margin-left: 5px;
-  
+
   }
-  .humidimg{
+
+  .humidimg {
     margin-left: 15px;
   }
-  .windimg{
+
+  .windimg {
     /* margin-right: -30px;  */
     margin-left: auto;
   }
-  .wdescription{
+
+  .wdescription {
     margin: auto;
     font-size: 23px;
   }
 }
+
 @media only screen and (mqx-width: 400px) {
-  .name{ margin-top: 0px;}
+  .name {
+    margin-top: 0px;
+  }
 }
 
 /* 
@@ -364,3 +416,28 @@ footer {
   }
 
 } */
+.ftimg {
+  width: 30px;
+  margin-left: 15px;
+}
+
+.myinfo {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  height: auto;
+  width: 350px;
+  text-decoration: underline;
+  border-radius: 10px;
+  margin-left: auto;
+  /* margin-right: auto;
+  background: rgba(255, 255, 255, 0.648);
+  border: 1px solid black; */
+  justify-content: center;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  align-items: center;
+}
