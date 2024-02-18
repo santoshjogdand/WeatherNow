@@ -108,7 +108,7 @@ searchbtn.addEventListener("click", () => {
   getWeather(city);
   console.log("clicked on button!!");
   console.log(city);
-  let = document.querySelector('.loc')
+  let loc = document.querySelector('.loc')
   getLocation();
   function getLocation() {
     if (navigator.geolocation) {
