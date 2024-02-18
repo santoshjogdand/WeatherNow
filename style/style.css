@@ -121,12 +121,12 @@ footer {
   border: 1px solid black;
   display: none;
   flex-direction: column;
-  transition: height 5s linear;
+  
 }
-.info{
+/*.info{
   height: 300px;
   transition: height 5s linear;
-}
+}*/
 
 .nav {
   backdrop-filter: blur(15px);
