@@ -33,8 +33,9 @@ async function getWeather(city) {
     notf.style.display = "none";
     load.style.display = "flex";
     setTimeout(function() {
-      info.style.transition = "height 5s linear";
       info.style.display = "flex";
+      info.style.height = "400px";
+      info.style.transition = "height 5s linear";
       info.style.transition = "display 5s linear";
       load.style.display = "none";
     }, 3000);
