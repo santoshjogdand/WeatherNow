@@ -1,20 +1,27 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Protest+Riot&display=swap');
 body {
   margin: 0;
   padding: 0;
   min-height: 100%;
   background: rgb(249, 242, 237);
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 h1 {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #000000;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 .weather {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 0;
   margin-left: 5px;
 }
 .wtsapp {
@@ -50,8 +57,8 @@ h1 {
   transition: .3s;
 }
 #city:hover{
-    width: 260px;
-    transition: .3s;
+  width: 260px;
+  transition: .3s;
 }
 footer {
   position: fixed;
@@ -63,7 +70,11 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: antiquewhite;
   backdrop-filter: blur(10px);
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .info {
@@ -74,48 +85,16 @@ footer {
   margin-left: auto;
   margin-right: auto;
   background: rgba(255, 255, 255, 0.648);
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   border: 1px solid black;
   display: none;
+  flex-direction: column;
 }
 
 .nav {
   backdrop-filter: blur(15px);
 
 }
-@media only screen and (max-width: 600px) {
-  .info {
-    margin-top: 20px;
-    height: 600px;
-    width: 80%;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media only screen and (min-height: 1100px) {
-  .info {
-    margin-top: 20px;
-    height: 600px;
-    width: 50%;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media only screen and (max-width: 300px) {
-  .info {
-    height: 400px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .info {
-    height: 400px;
-    width: 300px;
-  }
-}
-
 .notf{
   display: flex;
   margin-top: 2px;
@@ -125,3 +104,263 @@ footer {
   display: none;
   transition: .3s;
 }
+.load{
+  display: flex;
+  margin-top: 2px;
+  justify-content:center;
+  color: red;
+  display: none;
+  transition: .3s;
+  
+}
+.load svg {
+  width: 50px;
+  height: 50px;
+
+}
+.wimg{
+  width: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+} 
+.temper{
+  font-size: 70px;
+  margin: 5px auto 0px auto;
+}
+.name{
+  font-size: 40px;
+  margin: 20px auto 0px auto;
+}
+.cont{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.humidimg, .windimg{
+  width: 30px;
+  height: 30px;
+  margin-top: 3px;
+}
+.wind, .humid{
+  font-size: 15px
+}
+.wind{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.humid{
+  margin-left: 5px;
+
+}
+.humidimg{
+  margin-left: 15px;
+}
+.windimg{
+  /* margin-right: -30px;  */
+  margin-left: auto;
+}
+.wdescription{
+  margin: auto;
+  font-size: 23px;
+}
+@media only screen and (max-width: 450px) {
+  .wimg{
+    width: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  } 
+  .temper{
+    font-size: 70px;
+    margin: 5px auto 0px auto;
+  }
+  .name{
+    font-size: 40px;
+    margin: 20px auto 0px auto;
+  }
+  .cont{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .humidimg, .windimg{
+    width: 30px;
+    height: 30px;
+    margin-top: 3px;
+  }
+  .wind, .humid{
+    font-size: 15px
+  }
+  .wind{
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .humid{
+    margin-left: 5px;
+  
+  }
+  .humidimg{
+    margin-left: 15px;
+  }
+  .windimg{
+    /* margin-right: -30px;  */
+    margin-left: auto;
+  }
+  .wdescription{
+    margin: auto;
+    font-size: 23px;
+  }
+}
+@media only screen and (mqx-width: 400px) {
+  .name{ margin-top: 0px;}
+}
+
+/* 
+@media only screen and (min-height: 1000px) {
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+    font-size: 50px;
+  }
+  .weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .wtsapp {
+    width: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  .search {
+    width: 50px;
+    margin-left: 10px;
+    transition: .3s;
+  }
+  .search:hover{
+    width: 60px;
+    transition: .3s;
+  
+  }
+  #city {
+    height: 60px;
+    width: 400px;
+    margin-left: 40px;
+    padding: 2px 30px;
+    border-radius: 44px;
+    border: solid black 1px;
+    transition: .3s;
+    font-size: 30px;
+  }
+  #city:focus{
+    outline: none;
+    width: 420px;
+    transition: .3s;
+  }
+  #city:hover{
+    width: 420px;
+    transition: .3s;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 60px;
+    color: #000000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    backdrop-filter: blur(10px);
+    font-size: 30px;
+  }
+  
+  .info {
+    margin-top: 40px;
+    height: 800px;
+    width: 600px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .notf{
+    display: flex;
+    margin-top: 4px;
+    justify-content:center;
+    font-size: 26px;
+    color: red;
+    display: none;
+    transition: .3s;
+  }
+  .load{
+    display: flex;
+    margin-top: 4px;
+    justify-content:center;
+    color: red;
+    display: none;
+    transition: .3s;
+    
+  }
+  .load svg {
+    width: 100px;
+    height: 100px;
+  
+  }
+  .wimg{
+    width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  } 
+  .temper{
+    font-size: 140px;
+    margin: 10px auto 0px auto;
+  }
+  .name{
+    font-size: 80px;
+    margin: 10px auto 10px auto;
+  }
+  .cont{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .humidimg, .windimg{
+    width: 60px;
+    height: 60px;
+    margin-top: 6px;
+  }
+  .wind, .humid{
+    font-size: 30px
+  }
+  .wind{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .humid{
+    margin-left: 10px;
+  
+  }
+  .humidimg{
+    margin-left: 30px;
+  }
+  .windimg{
+    /* margin-right: -30px; 
+    margin-left: auto;
+  }
+  .wdescription{
+    margin: auto;
+    font-size: 50px;
+  }
+
+} */
