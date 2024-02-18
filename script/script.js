@@ -11,8 +11,9 @@ async function getWeather(city) {
   let info = document.querySelector(".info");
   if (data.name == undefined) {
     notf.style.display = "flex";
-    info.style.transitionDuration = "5s";
+    info.style.display = "none";
     notf.style.transitionDuration = "5s";
+    info.style.transitionDuration = "5s";
     console.log("not found");
   } else {
     CityName = data.name;
