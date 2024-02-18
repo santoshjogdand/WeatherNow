@@ -121,6 +121,7 @@ footer {
   border: 1px solid black;
   display: none;
   flex-direction: column;
+  transition: display .3s;
 }
 
 .nav {
